@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1" />
+    <meta name="theme-color" content="#0b0913" />
+    <meta name="color-scheme" content="dark" />
+    <title>for my babydoll</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 28L6 18a5 5 0 0 1 0-8 5 5 0 0 1 8 0l2 2.4L18 10a5 5 0 0 1 8 0 5 5 0 0 1 0 8z' fill='%23f6a8a0'/%3E%3C/svg%3E"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="app" class="app">
+      <canvas id="particles" aria-hidden="true"></canvas>
+
+      <div class="vignette" aria-hidden="true"></div>
+      <div class="grain" aria-hidden="true"></div>
+
+      <main id="stage" class="stage">
+        <!-- Scenes are injected by src/main.js via scene modules -->
+      </main>
+
+      <button id="audio-toggle" class="audio-toggle" type="button" aria-label="Mute music" title="Sound on">
+        <span class="audio-toggle-icon" aria-hidden="true">♪</span>
+      </button>
+    </div>
+
+    <noscript>
+      <div style="text-align:center;padding:4rem 1.5rem;font-family:Georgia,serif;color:#f5ead9;">
+        This little apology needs JavaScript to open the envelope. Please enable it, babydoll 🥺
+      </div>
+    </noscript>
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
