@@ -79,6 +79,11 @@ export const createPunchScene = ({ stage, audio, particles, onAdvance }) => {
   const nextBtn = qs(".punch-next", scene);
   const unlockMsg = qs(".unlock-msg", scene);
 
+  const normalPhoto = new Image();
+  normalPhoto.src = "./assets/soujash-normal.jpg";
+  const knockedOutPhoto = new Image();
+  knockedOutPhoto.src = "./assets/soujash-ded.jpg?knocked-out";
+
   let animating = false;
   let shieldTimer = null;
 
@@ -143,7 +148,7 @@ export const createPunchScene = ({ stage, audio, particles, onAdvance }) => {
     bonk.classList.remove("pop");
     void bonk.offsetWidth;
     bonk.classList.add("pop");
-    soujashImg.src = "./assets/soujash-ded.jpg";
+    soujashImg.src = knockedOutPhoto.src;
     soujashImg.alt = "Soujash, successfully knocked out";
     app.classList.remove("stage-shake-hard");
     app.classList.add("stage-shake-hard");
@@ -164,7 +169,7 @@ export const createPunchScene = ({ stage, audio, particles, onAdvance }) => {
     soujashCard.classList.remove("respawn");
     void soujashCard.offsetWidth;
     soujashCard.classList.add("respawn");
-    soujashImg.src = "./assets/soujash-normal.jpg";
+    soujashImg.src = normalPhoto.src;
     soujashImg.alt = "Soujash, ready to be punched";
     setState("punchCount", 0);
     delete koBadge.dataset.show;

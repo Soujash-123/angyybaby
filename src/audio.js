@@ -130,7 +130,6 @@ export class AudioManager {
       el.play().catch(() => onError?.(el));
     };
 
-    el.addEventListener("canplay", start, { once: true });
     el.addEventListener(
       "ended",
       () => {
@@ -144,8 +143,8 @@ export class AudioManager {
       { once: true }
     );
 
-    if (el.readyState >= 1) start();
-    else el.addEventListener("loadedmetadata", start, { once: true });
+    el.load();
+    start();
   }
 
   get song1Duration() {
