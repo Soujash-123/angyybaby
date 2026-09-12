@@ -61,7 +61,14 @@ export function createRevealScene({ stage, audio, onAdvance }) {
 
   scene.innerHTML = `
     <div class="video-box">
-      <video playsinline webkit-playsinline preload="auto" aria-label="A kiss, the real apology">
+      <video
+        playsinline
+        webkit-playsinline
+        autoplay
+        muted
+        preload="auto"
+        aria-label="A kiss, the real apology"
+      >
         <source src="./assets/puchi.mp4" type="video/mp4" />
       </video>
       <div class="reveal-chrome" aria-hidden="true"></div>
